@@ -631,6 +631,7 @@ MonoBehaviour:
   _playerLevel: 1
   _XPToLevel: 50
   _XPperKill: 10
+  _playerCharacter: {fileID: 1052891815}
 --- !u!4 &1052891817
 Transform:
   m_ObjectHideFlags: 0

@@ -7,7 +7,8 @@ public class PlayerLevel : MonoBehaviour
 {
     [SerializeField] private float _playerLevel = 1;
     [SerializeField] private float _XPToLevel = 50;
-    [SerializeField] private float _XPperKill = 25;
+    [SerializeField] public float _XPperKill = 25;
+    [SerializeField] private GameObject _playerCharacter = null;
 
 
     float _totalXP;
@@ -22,7 +23,7 @@ public class PlayerLevel : MonoBehaviour
 
          if(Keyboard.current.qKey.wasPressedThisFrame)
          {
-             _totalXP += _XPperKill;
+            _gainXP();
             
          }
         
@@ -54,4 +55,11 @@ public class PlayerLevel : MonoBehaviour
         }
         
     }
+
+    public void _gainXP()
+    {
+        _totalXP += _XPperKill;
+    }
+
+
 }
